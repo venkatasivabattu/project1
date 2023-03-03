@@ -1,0 +1,120 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+html{
+    background-image: linear-gradient(to right top, #aec8f4, #c4cff6, #d7d6f8, #e6dff9, #f3e8fb, #f3e8fb, #f3e8fb, #f3e8fb, #e6dff9, #d7d6f8, #c4cff6, #aec8f4);
+    margin-top:148px;
+    padding-top: 70px;
+}
+.counter{
+    margin-left:15%;
+    height:250px;
+    width:800px;
+    background-color:#fff;
+    box-shadow: 2px 2px 3px black;
+    
+}
+.counter h2{
+    background-color: rgb(32, 181, 32);
+    padding:3px;
+    padding-top: 10px;
+    color:blue;
+    height:50px;
+    text-align: center;
+    
+}
+.counter .enroll-div .enrollc,.counter .enroll-div .enrollw{
+    background-color: blue;
+    color:white
+}
+.counter .enroll-div .enrollc p,.counter .enroll-div .enrollw p{
+   
+    color:white;
+    padding-top:5px;
+}
+.enroll{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left:15%;
+    height:250px;
+    width:800px;
+    background-color:#fff;
+    box-shadow: 2px 2px 3px black;
+    
+}
+.enroll h2{
+    background-color:rgb(19, 29, 219);
+    padding:3px;
+    padding-top: 10px;
+    color:#fff;
+    height:50px;
+    text-align: center;
+   
+}
+.enroll-div{
+    display:flex;
+    margin-top: 15px;
+}
+.enrollw,.enrollc{
+    background-color:rgb(32, 181, 32);
+    width:200px;
+    height: 170px;
+    padding:15px;
+    padding-top: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
+    text-align: center;
+    
+}
+.enrollw a,.enrollc a{
+    color:blue;
+    text-decoration: none;
+    font-size: 20px;
+}
+.enrollw:hover,.enrollc:hover{
+    width:205px;
+    height: 175px;
+    padding:17px;
+    padding-top: 13px;
+    box-shadow: 4px 4px 3px black;
+}
+.enrollw a:hover,.enrollc a:hover{
+    color:#fff;
+    
+}
+.enrollw{
+    margin-left: 170px;
+    margin-right: 50px;
+}
+.viewer{
+    
+    margin-left:15%;
+    height:250px;
+    width:800px;
+    background-color:#fff;
+    box-shadow: 2px 2px 3px black;
+    
+}
+.viewer h2{
+    background-color: rgb(32, 181, 32);
+    padding:3px;
+    padding-top: 10px;
+    color:blue;
+    height:50px;
+    text-align: center;
+}
+.viewer .enroll-div .enrollc,.viewer .enroll-div .enrollw{
+    background-color: blue;
+    color:white
+}
+.viewer .enroll-div .enrollc a,.viewer .enroll-div .enrollw a{
+    
+    color:rgb(32, 181, 32);
+}
+.viewer .enroll-div .enrollc a:hover,.viewer .enroll-div .enrollw a:hover{
+    
+    color:#fff;
+}
+

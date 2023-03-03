@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body>
+    <div class="container">
+        <a  id='add' routerLink="../../Enroll/c"><i class="fa fa-plus-square" aria-hidden="true"></i><b> Add Children</b></a>
+        <div class="holder">
+                <form class="form">
+                    <input type="search" class="search" [(ngModel)]="search" name="search" placeholder="enter..." autocomplete="off" required> 
+                    <button type="submit" (click)='searchFor()'><i class="fas fa-search"></i></button> 
+                </form>
+                <button (click)='getAllChildren()'><i class="fa fa-eye" aria-hidden="true"></i> <b> View All Data</b></button>
+        </div>
+        <div class="table-container">
+            <table class="my-table">
+                <thead>
+                  <tr>
+                    
+                    <th>UID/Aadhar</th>
+                    <th>Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Gender</th>
+                    
+                    <th>Mother Aadhar No</th>
+                    <th>Mother Name</th>
+                    <th>Mother Mobile No</th>
+                    <th>Adresss</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    <th>Schooling</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of children">
+                    
+                    <td>{{ row.cuid }}</td>
+                    <td>{{ row.cname }}</td>
+                    <td>{{ row.cdob | date }}</td>
+                    <td>{{ row.cgen}}</td>
+                    <td>{{ row.mname }}</td>
+                    <td>{{ row.muid }}</td>
+                    <td>{{ row.mmobile }}</td>
+                    
+                    <td><div style="width: 100px; overflow-x: scroll;">{{ row.cstreet }} {{ row.cvil }} {{ row.cmandal }} {{ row.cdistrict }} {{ row.cstate }} {{ row.cpincode }}</div></td>
+                    <td><button (click)="update(row)" id="update">Update</button></td>
+                    <td><button (click)="delete(row.cuid)" id="delete">Delete</button></td>
+                    <td>
+                    <div *ngIf="row.schooling;else no"> 
+                        <p id="case1" >Promoted</p>
+                     </div>
+                     <ng-template #no> 
+                        <div *ngIf="row.cage>=4;else notelig">
+                        <button  (click)="promote(row)" id="case2" >Promote</button>
+                        </div>
+                        <ng-template #notelig>
+                            <button   id="enroll" disabled>Promote</button>
+                        </ng-template>
+                     </ng-template>
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+              
+        </div>
+    </div>
+</body>
+</html>

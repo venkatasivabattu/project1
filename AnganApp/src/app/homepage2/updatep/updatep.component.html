@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form">
+            <h2>Women <br>Updation<br> Form</h2>
+            <form [formGroup]="fdata" (ngSubmit)="updateWomen(fdata.value)" class="myform">
+                <label>Full Name<span>*</span>:</label><input type="text"  name="pname" formControlName="pname">
+                <label>UID/Aadhar<span>*</span>:</label><input type="text"  name="puid" formControlName="puid"><br>
+                <label>dob:</label><br><input type="date" id="date"  name="pdob" formControlName="pdob"><br>
+                <label>Last Identified Menstrual Date<span>*</span>:</label><input type="date"  name="pdoc" formControlName="pdoc">
+                <label>Delivered(1 if True ,else 0)<span>*</span>:</label><input type="text"  name="delivery" formControlName="delivery">
+                <label>Date of Delivery(if Delivered)<span>*</span>:</label><input type="date"  name="pdod" formControlName="pdod">
+                
+                <label>Mobile No:</label><input type="text"  name="pmobile" formControlName="pmobile">
+                <label>Gaurdian Name<span>*</span>:</label><input type="text"  name="gname" formControlName="gname">
+                <label>Gaurdian UID<span>*</span>:</label><input type="text"  name="guid" formControlName="guid">
+                <label>Gaurdian Mobile:</label><input type="text"  name="gmobile" formControlName="gmobile">
+                <label>Relation with Gaurdian:</label><input type="text"  name="relation" formControlName="relation">
+                <label>Street/Ward:</label><input type="text"  name="pstreet" formControlName="pstreet">
+                <label>Village/Town Name<span>*</span>:</label><input type="text"  name="pvil" formControlName="pvil">
+                <label>Mandal Name<span>*</span>:</label><input type="text"  name="pmandal" formControlName="pmandal">
+                <label>District Name<span>*</span>:</label><input type="text"  name="pdistrict" formControlName="pdistrict">
+                <label>State Name<span>*</span>:</label><input type="text"  name="pstate" formControlName="pstate">
+                <label>Pincode<span>*</span>:</label><input type="text"  name="ppincode" formControlName="ppincode">
+                <div class="actions">
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="reset" value="Clear" id="reset" >
+                </div>
+                
+            </form>
+            <a routerLink="../../home2/View/p" id="hero">cancel</a>
+        </div>
+    </div>
+    <div class="img-container">  
+        <img src="/../../assets/images/homepage2/updatep.jpg" />
+    </div>
+</body>
+</html>
+
+<router-outlet></router-outlet>

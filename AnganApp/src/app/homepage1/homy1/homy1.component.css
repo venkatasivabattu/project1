@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
+body{
+    
+    background-color: white;
+    padding-top:60px;
+    
+    left: 0px;
+    right: 0px;
+
+    background-image: url('/../assets/images/b1.png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height:110vh;
+}
+.grid-container{
+    margin-top: 15%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 9%;
+    height:250px;
+    width:900px;
+    background-color:  rgba(255, 255, 255,0.6);
+    padding:10px;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:5px 5px 6px rgba(12, 1, 1, 0.8);
+}
+.grid-item{
+    margin-right: 10px;
+    margin-left:10px;
+    background-color: #fff;
+    width:150px;
+    height:150px;
+    box-shadow:5px 5px 6px rgba(12, 1, 1, 0.8);
+    border-radius:5px;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    font-size: 1.3rem;
+    padding-left:5px;
+    padding-top: 25px;
+    
+}
+.grid-item:hover{
+    width:159px;
+    height:159px;
+    margin-right:5px;
+    margin-left: 5px;
+    box-shadow:6px 6px 7px rgba(12, 1, 1, 0.9);
+    font-size: 1.5rem;
+    padding-left:15px;
+   
+}
+.grid-item:nth-child(odd){
+    background-color: coral;
+}
+.grid-item:nth-child(even){
+    background-color:rgb(32, 181, 32);
+}
+.fa{
+    display:block;
+    
+}
+.grid-container2{
+    height:250px;
+    width:100%;
+    background-image: linear-gradient(to right top, #aec8f4, #c4cff6, #d7d6f8, #e6dff9, #f3e8fb, #f3e8fb, #f3e8fb, #f3e8fb, #e6dff9, #d7d6f8, #c4cff6, #aec8f4);
+    align-items: center;
+   justify-content: center;
+}
+.grid-container2 h2{
+    background-color: rgba(32, 181, 32,0.78);
+    text-align: center;
+    padding: 5px;
+    color:#fff;
+    
+}
+.contact-holder{
+    margin-top: 20px;
+    height:200px;
+    width:800px;
+    display:flex;
+   margin-left:15%;
+   justify-content: space-around;
+}
+.contact-item{
+    margin:15px;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 5px;
+    height:130px;
+    width:340px;
+    padding: 5px;
+}
+.contact-item img{
+    width:330px;
+ height:120px;
+}
+.contact-item:hover{
+    width:359px;
+ height:140px;
+ padding: 7px;
+ margin-top:10px ;
+
+}
+.fa-phone{
+    display:inline;
+    margin-left: 5px;
+}

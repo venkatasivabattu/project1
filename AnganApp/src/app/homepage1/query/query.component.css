@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+
+}
+body{
+    background-image: url('/../assets/images/bg/querybg.jpg');
+   
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+    margin-top:50px;
+    left: 0px;
+    right: 0px;
+    height: 100vh;
+}
+.mycontainer{
+    margin-top:90px;
+    height:350px;
+    left:5%;
+    right:5%;
+    bottom:8%;
+    padding-bottom:20px;
+    background-color: rgba(251, 248, 248,0.5);
+    position: fixed;
+    box-shadow:5px 5px 6px rgba(12, 1, 1, 0.8);
+    
+}
+.mycontainer .warn{
+    color:red;
+    text-align: center;
+    font-size: 40px;
+}
+.header1{
+    background-color: yellow;
+    padding:9px;
+    text-align: center;
+    
+}
+.header1 h1{
+    margin-left: 290px;
+        width:400px;
+        padding:3px;
+        background-color: rgb(32, 32, 215);
+        border-radius: 8px;
+        color:#fff;
+        text-align: center;
+        border-bottom:3px solid coral;
+}
+.form{
+    margin:10px;
+    text-align: center;
+    
+   
+}
+.form .search{
+    height:30px;
+    width: 600px;
+    border:1px solid blueviolet;
+    margin-right: 5px;
+}
+.form button{
+    color:blueviolet;
+    height:30px;
+    width:27px;
+    background-color: rgba(255, 255, 0,0.6);
+    border:2px solid blueviolet;
+}
+.form .search:hover,.form .search:focus{
+    
+    border:2px solid blueviolet;
+    box-shadow:5px 5px 6px rgba(12, 1, 1, 0.8);
+    outline: none;
+    height:31px;
+    width: 602px;
+    
+    
+}
+.form button:hover,.form button:focus{
+    border:2px solid blueviolet;
+    box-shadow:5px 5px 6px rgba(12, 1, 1, 0.8);
+    height:32px;
+    width:29px;
+    cursor: pointer;
+
+}
+.heart{
+    width:95%;
+    margin-left:2.5%;
+    margin-right: 2.5%;
+    background-color: blue;
+    margin-bottom: 0px;
+    height:50px;
+}
+.heart table{
+    width:100%;
+    height:50px;
+}
+.heart table,th,td{
+    padding:8px;
+    
+}
+.heart table tr th:first-child{
+    padding:2px;
+}
+.tab-container{
+    width:95%;
+    margin-left:2.5%;
+    margin-right: 2.5%;
+    margin-top: 0px;
+    background-color: aqua;
+    min-height: 0px;
+    max-height:120px;
+    overflow-y: scroll;
+    
+}
+.tab-container table{
+    width:100%;
+    height:100px;
+    
+
+}
+
+.tab-container table,th,td{
+    padding: 10px;
+    
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}

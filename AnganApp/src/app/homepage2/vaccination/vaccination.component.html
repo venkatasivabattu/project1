@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sub-container">
+            <div class="item2">
+                <h3>Vaccines For Women</h3>
+                <div class="holder">
+                    <ul *ngFor="let l of vaccines">
+                        <li  *ngIf="l.vfor=='p'" (click)="viewVaccine(l)">
+                            
+                          <i class="fa fa-arrow-right fa-0.3x" aria-hidden="true"></i>{{l.vfname}} ({{l.vname}})
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item2">
+                <h3><b>Vaccines For Children</b></h3>
+                <div class="holder">
+                    <ul *ngFor="let l of vaccines">
+                        <li *ngIf="l.vfor=='c'" (click)="viewVaccine(l)">
+                            
+                          <i class="fa fa-arrow-right" aria-hidden="true"></i> {{l.vfname}} ({{l.vname}})
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <h2>Search Vaccinations</h2>
+            <div class="search-container">
+              
+                <b>Vaccine Type:</b><select [(ngModel)]="fvfor" (change)="vforfun()">
+                  <option value="">Select</option>
+                  <option value="p">Women</option>
+                  <option value="c">Children</option>
+                  </select>
+                <b>Vaccine Name:</b><select [(ngModel)]="fvaccine" (change)="vaccinefun()">
+                      <option  *ngFor="let i of fvaccines"   value={{i.vid}} >{{i.vname}}</option>
+                </select>
+                <b>Dose Number:</b><select [(ngModel)]="fdosage" >
+                    <option  *ngFor="let i of fdosages"   value={{i.did}} >{{i.dn}}</option>
+                </select>
+                <b>Status:</b><div *ngIf="fdosage ;else na1">
+                <select [(ngModel)]="fstatus">
+                  
+                  <option value="d">vaccinated</option>
+                  <option value="n">pending</option>
+                  <option value="b">all</option>
+                </select>
+              </div>
+              <ng-template #na1>
+                <select>
+                  <option></option>
+                </select>
+              </ng-template>
+              <div >
+                <button (click)="getVaccinations()" [disabled]="!fdosage"><b>Search</b></button>
+              </div>
+              
+          </div>
+          <div class="result">
+            <div class="fail" *ngIf="nodata;else s">
+              <div></div>
+              <i class="fa fa-frown-o" aria-hidden="true"></i><p><b>No Data Found</b></p>
+            </div>
+            <ng-template #s>
+            <div class="success" *ngIf="fdata">
+              <table>
+                <thead>
+                    <tr>
+                      <th>UID/Aadhar</th>
+                      <th>Name</th>
+                      <th>Status</th>
+                      <th>Date of Vaccination</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let v of fdata">
+                    <td>{{v.uid}}</td>
+                    <td>{{v.uname}}</td>
+                    <td>
+                      <div *ngIf="!v.status;else vaccinated">
+                        <button (click)="markVaccination(v)"><b>Vaccinate</b></button>
+                      </div>
+                      <ng-template #vaccinated>
+                        <p>Vaccinated</p>
+                      </ng-template>
+                    </td>
+                    <td>{{v.date | date}}</td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </ng-template>
+          </div>
+              
+        </div>
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>

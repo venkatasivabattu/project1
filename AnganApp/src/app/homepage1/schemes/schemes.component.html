@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="container" *ngFor="let s of schemes$">
+      <div class="header">
+        <div class="heading">
+          <p></p>
+          <h2>{{s.sname}}</h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="content">
+        <h3>Scheme Description</h3>
+        <P>{{s.sdesc}}</P>
+        <h3>Eligibility</h3>
+        <P>{{s.seligibility}}</P>
+      </div>
+    </div>
+<router-outlet></router-outlet>
+    
+</body>
+</html>

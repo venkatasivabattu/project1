@@ -1,0 +1,44 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+html{
+    
+    margin-top:148px;
+    padding-top: 0px;
+    
+}
+.view{
+    margin-top: 1px;
+    margin-left:28%;
+    width:500px;
+    height:40px;
+    background-color: #FEE715FF;
+    position:fixed;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
+    scroll-behavior: smooth;
+}
+.view a{
+    width:200px;
+    margin:10px;
+    color:#101820FF;
+    text-align: center;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font: 18px;
+}
+.view a:focus{
+    background-color: #101820FF;
+    color:#fff;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius: 5px;
+}

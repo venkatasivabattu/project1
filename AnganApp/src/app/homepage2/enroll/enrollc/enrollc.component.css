@@ -1,0 +1,118 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to bottom, #eec5dc, #ffc5cf, #ffc8bd, #ffd0a9, #ffdc9b, #f4e399, #e5eb9a, #d4f2a0, #c5f2a9, #b7f2b4, #aaf1be, #a0f0c8);
+    height:72vh;
+    padding:10px;
+    padding-right:5px;
+}
+.super-div{
+    margin-top:35px;
+    
+    width:100%;
+    height:380px;
+    display:flex;
+}
+.super-div .form{
+    width:516px;
+    height:370px;
+    background-color: #fff;
+    margin-right: 10px;
+    margin-left:10px;
+    overflow-y: scroll;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 10px;
+}
+.super-div .form h2{
+    background-color:  rgb(190, 29, 230);
+    position: fixed;
+    width:inherit;
+    padding: 5px;
+    text-align: center;
+    color:#fff;
+    border-radius: 10px;
+}
+.myform{
+    margin-top:40px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.myform .gender{
+    display:flex;
+    flex-direction: row;
+    margin: 3px;
+}
+.myform .gender input{
+    margin-top: 0px;
+}
+.myform .gender label{
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.myform input{
+    margin:3px;
+    margin-bottom: 10px;
+    height:25px;
+    border-radius: 8px;
+}
+.myform label span{
+    color:red;
+}
+
+.myform input:focus{
+    background-color: inherit;
+    border-bottom:2px solid black;
+    border-top:none;
+    border-left:none;
+    border-right: none;
+    outline:none;
+    border-radius: 0px;
+}
+.myform .actions{
+    display: block;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius:8px;
+}
+.myform .actions input{
+    width:45%;
+    height:33px;
+    color:#0814fb;
+    font-size: 15px;
+    
+    
+}
+.myform .actions  #submit{
+    background-color:rgb(11, 210, 11);
+    border-radius:8px;
+}
+.myform .actions #reset{
+    background-color:rgb(255, 20, 20);
+    border-radius:8px;
+}
+.myform .actions input:hover{
+    border: 2px solid black;
+    color:#fff;
+    box-shadow: 3px 3px 2px black;
+    border-radius:8px;
+}
+.myform .actions  #submit:hover{
+    background-color:rgba(11, 210, 11,0.8);
+    border-radius:8px;
+}
+.myform .actions #reset{
+    background-color:rgba(255, 20, 20,0.8);
+    border-radius:8px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="counter">
+        <h2>Benificiary Data</h2>
+        <div class="enroll-div">
+            <div class="enrollw">
+                <img src="/../../assets/images/homepage2/dashboard/dataw.png" width="170px" height="120px"/><br>
+                <p>{{wc}}</p>
+            </div>
+            <div class="enrollc">
+                <img src="/../../assets/images/homepage2/dashboard/datac.png" width="170px" height="120px"/><br>
+                <p>{{cc}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="enroll">
+        <h2>New Enrollment</h2>
+        <div class="enroll-div">
+            <div class="enrollw">
+                <img src="/../../assets/images/homepage2/dashboard/enrollw.png" width="170px" height="130px"/><br>
+                <a routerLink="../Enroll/p" >Enroll</a>
+            </div>
+            <div class="enrollc">
+                <img src="/../../assets/images/homepage2/dashboard/enrollc.png" width="170px" height="130px"/><br>
+                <a routerLink="../Enroll/c" >Enroll</a>
+            </div>
+        </div>
+    </div>
+    <div class="viewer">
+        <h2>Veiw Data</h2>
+        <div class="enroll-div">
+            <div class="enrollw">
+                <img src="/../../assets/images/homepage2/dashboard/dataw.png" width="170px" height="130px"/><br>
+                <a routerLink="../View/p" >View</a>
+            </div>
+            <div class="enrollc">
+                <img src="/../../assets/images/homepage2/dashboard/datac.png" width="170px" height="130px"/><br>
+                <a routerLink="../View/c" >View</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+<router-outlet></router-outlet>

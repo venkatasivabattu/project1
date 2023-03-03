@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="super-div">
+        <div class="img1">
+            <img src="/../../assets/images/homepage2/enrollc/img1.png" width="300px" height="325px"/>
+        </div>
+        <div class="form">
+            <h2>Children Enrollment Form</h2>
+            <form [formGroup]="fdata" (ngSubmit)="postChild(fdata.value)" class="myform">
+                <label>Full Name<span>*</span>:</label><input type="text"  name="cname" formControlName="cname">
+                <label>UID/Aadhar<span>*</span>:</label><input type="text"  name="cuid" formControlName="cuid">
+                <label>Date of Birth<span>*</span>:</label><input type="date"  name="cdob" formControlName="cdob">
+                <label>Gender<span>*</span>:</label>
+                <div class="gender">
+                    <input type="radio"  name="cgen" formControlName="cgen" value="male"><label for="male">Men</label>
+                    <input type="radio"  name="cgen" formControlName="cgen" value="female"><label for="female">Female</label>
+
+                </div>
+                
+                <label>Mother Name<span>*</span>:</label><input type="text"  name="mname" formControlName="mname">
+                <label>Mother UID<span>*</span>:</label><input type="text"  name="muid" formControlName="muid">
+                <label>Mother Mobile:</label><input type="text"  name="mmobile" formControlName="mmobile">
+                <label>Street/Ward:</label><input type="text"  name="cstreet" formControlName="cstreet">
+                <label>Village/Town Name<span>*</span>:</label><input type="text"  name="cvil" formControlName="cvil">
+                <label>Mandal Name<span>*</span>:</label><input type="text"  name="cmandal" formControlName="cmandal">
+                <label>District Name<span>*</span>:</label><input type="text"  name="cdistrict" formControlName="cdistrict">
+                <label>State Name<span>*</span>:</label><input type="text"  name="cstate" formControlName="cstate">
+                <label>Pincode<span>*</span>:</label><input type="text"  name="cpincode" formControlName="cpincode">
+                <div class="actions">
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="reset" value="Clear" id="reset" >
+                </div>
+                
+            </form>
+        </div>
+        <div class="img2">
+            <img src="/../../assets/images/homepage2/enrollc/img2.png" width="295px" height="325px"/>
+        </div>
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>

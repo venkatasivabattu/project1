@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+</head>
+<body>
+<div class="grid-container">
+    
+        <div class="grid-item"><i class="fa fa-home fa-3x" aria-hidden="true"></i>Anganwadis<br>{{c.ac[0]["count(*)"]}}</div>
+        <div class="grid-item"><i class="fa fa-database fa-3x" aria-hidden="true"></i>Schemes<br>{{c.sc[0]["count(*)"]}}</div>
+        <div class="grid-item"><i class="fa fa-users fa-3x" aria-hidden="true"></i>Workers<br>{{c.wc[0]["count(*)"]}}</div>
+        <div class="grid-item"><i class="fa fa-female fa-2x" aria-hidden="true"></i>Women Beneficiaries<br>{{c.pc[0]["count(*)"]}}</div>
+        <div class="grid-item"><i class="fa fa-child fa-2x" aria-hidden="true"></i>Children Beniciaries<br>{{c.cc[0]["count(*)"]}}</div>
+        
+      
+</div>
+<div class="grid-container2">
+        <h2>Help-Lines<i class="fa fa-phone" aria-hidden="true"></i></h2>
+        <div class="contact-holder">
+                <div class="contact-item">
+                        <img src="/../assets/images/homepage1/homy1/c1.png" >
+                </div>
+                <div class="contact-item">
+                        <img src="/../assets/images/homepage1/homy1/c2.png" >
+                </div>
+        </div>
+</div>
+
+    
+</body>
+</html>
+<router-outlet></router-outlet>

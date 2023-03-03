@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+        <div class="myheader">
+            <a  routerLink="home2" class="myheaderimg"><img src="/assets/images/logo.png" ></a>  
+            <div class="mini-navbar"> 
+                <a routerLink="../home2">Dashboard</a>
+                <a routerLink="../home2" style="color:blue;">{{wname}}</a>
+            </div>
+            
+        </div>
+        <div class="navbar">
+            <div class="item-holder">
+                <a routerLink="../home2/Dashboard">Dashboard</a>
+                <a routerLink="/home2/Enroll">Enroll</a>
+                <a routerLink="/home2/View">View</a>
+                <a routerLink="/home2/vaccines">Vaccination</a>
+            </div>
+                
+        </div>
+        <p></p>
+    </body>
+</html>
+<router-outlet></router-outlet>

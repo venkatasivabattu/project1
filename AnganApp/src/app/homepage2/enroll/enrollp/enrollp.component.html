@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="super-div">
+        <div class="img1">
+            <img src="/../../assets/images/homepage2/enrollp/img1.png" width="300px" height="325px"/>
+        </div>
+        <div class="form">
+            <h2>Women Enrollment Form</h2>
+            <form [formGroup]="fdata" (ngSubmit)="postWomen(fdata.value)" class="myform">
+                <label>Full Name<span>*</span>:</label><input type="text"  name="pname" formControlName="pname">
+                <label>UID/Aadhar<span>*</span>:</label><input type="text"  name="puid" formControlName="puid">
+                <label>Date of Birth<span>*</span>:</label><input type="date"  name="pdob" formControlName="pdob">
+                <label>Last Identified Menstrual Date<span>*</span>:</label><input type="date"  name="pdoc" formControlName="pdoc">
+                <label>Mobile No:</label><input type="text"  name="pmobile" formControlName="pmobile">
+                <label>Gaurdian Name<span>*</span>:</label><input type="text"  name="gname" formControlName="gname">
+                <label>Gaurdian UID<span>*</span>:</label><input type="text"  name="guid" formControlName="guid">
+                <label>Gaurdian Mobile:</label><input type="text"  name="gmobile" formControlName="gmobile">
+                <label>Relation with Gaurdian:</label><input type="text"  name="relation" formControlName="relation">
+                <label>Street/Ward:</label><input type="text"  name="pstreet" formControlName="pstreet">
+                <label>Village/Town Name<span>*</span>:</label><input type="text"  name="pvil" formControlName="pvil">
+                <label>Mandal Name<span>*</span>:</label><input type="text"  name="pmandal" formControlName="pmandal">
+                <label>District Name<span>*</span>:</label><input type="text"  name="pdistrict" formControlName="pdistrict">
+                <label>State Name<span>*</span>:</label><input type="text"  name="pstate" formControlName="pstate">
+                <label>Pincode<span>*</span>:</label><input type="text"  name="ppincode" formControlName="ppincode">
+                <div class="actions">
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="reset" value="Clear" id="reset" >
+                </div>
+                
+            </form>
+        </div>
+        <div class="img2">
+            <img src="/../../assets/images/homepage2/enrollp/img2.png" width="250px" height="325px"/>
+        </div>
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>

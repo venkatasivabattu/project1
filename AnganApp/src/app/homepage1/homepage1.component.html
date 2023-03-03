@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+
+        <div class="navbar">
+           <a  routerLink=""><img src="/assets/images/logo.png" ></a>            
+                <ul>
+                    <li><a routerLink='/home1/aboutus'><i class="fa fa-users" aria-hidden="true"></i>About Us</a></li>
+                    <li><a routerLink='/home1/schemes'><i class="fa fa-database" aria-hidden="true"></i>Our Schemes</a></li>
+                    <li><a routerLink='/home1/query'><i class="fa fa-search" aria-hidden="true"></i>Query</a></li>
+                    <li  id="profile"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a routerLink='/home1/login' >Login</a></li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                </ul>
+            
+        </div>
+        
+    </body>
+</html>
+<router-outlet></router-outlet>

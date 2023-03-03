@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    
+
+}
+body{
+    background-image: url('/../assets/images/bg/loginbg.jpeg');
+    margin-top:60px;
+    left: 0px;
+    right: 0px;
+    padding-top:6px;
+    
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left:8px;
+    padding-bottom: 20px;
+    height:100vh;
+    
+    
+    
+    
+    
+}
+.container{
+    padding:15px;
+    position: absolute;
+    
+    background-color:rgba(32, 32, 215,0.89);
+    top:40%;
+    left:35%;
+    width:380px;
+    border:1px solid #fff;
+    border-radius: 8px;
+    box-shadow:5px 5px 6px rgba(236, 230, 230,0.8);
+    color:white;
+}
+.btn {
+    position:center;
+    margin-left: 40%;
+}
+.area{
+    margin-left: 40px;
+    
+}
+.area a{
+    text-decoration: none;
+    color:white;
+
+}
+.area p{
+    font-size: 10px;
+}
+.area a:hover{
+    color:rgb(162, 54, 211);
+    
+}

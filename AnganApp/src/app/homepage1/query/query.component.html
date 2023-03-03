@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   
+</head>
+<body>
+    <div class="mycontainer">
+        <div class="header1">
+        <h1>Search For Anganwadi</h1>
+        </div>
+        <form class="form">
+            <input type="search" class="search" [(ngModel)]="search" name="search" placeholder="enter..." autocomplete="off" required> 
+            <button type="submit" (click)='searchFor()'><i class="fas fa-search"></i></button> 
+        </form>
+        <div class="heart">
+        <table>
+          <thead>
+            <tr>
+              <th >Id</th>
+              <th >Mobile No</th>
+              <th >Email-Id</th>
+              <th >Street</th>
+              <th >Village</th>
+              <th >Mandal</th>
+              <th >District</th>
+              <th >State</th>
+              <th >Pincode</th>
+            </tr>
+          </thead>
+        </table>
+        </div>
+        <div class="tab-container">
+          
+          <table class="ok">
+            
+            <tbody>
+              <tr *ngFor="let a of angan">
+                <td >{{a.aid}}</td>
+                <td >{{a.amobile}}</td>
+                <td >{{a.aemail}}</td>
+                <td >{{a.astreet}}</td>
+                <td>{{a.avil}}</td>
+                <td >{{a.amandal}}</td>
+                <td >{{a.adistrict}}</td>
+                <td >{{a.astate}}</td>
+                <td >{{a.apincode}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>

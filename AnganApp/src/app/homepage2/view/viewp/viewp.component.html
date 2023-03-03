@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body>
+    <div class="container">
+        <a  id='add' routerLink="../../Enroll/p"><i class="fa fa-plus-square" aria-hidden="true"></i><b> Add Women</b></a>
+        <div class="holder">
+                <form class="form">
+                    <input type="search" class="search" [(ngModel)]="search" name="search" placeholder="enter..." autocomplete="off" required> 
+                    <button type="submit" (click)='searchFor()'><i class="fas fa-search"></i></button> 
+                </form>
+                <button (click)='getAllWomen()'><i class="fa fa-eye" aria-hidden="true"></i> <b> View All Data</b></button>
+        </div>
+        <div class="table-container">
+            <table class="my-table">
+                <thead>
+                  <tr>
+                    
+                    <th>UID/Aadhar</th>
+                    <th>Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Concieved Date</th>
+                    <th>Date of Delivery</th>
+                    <th>Mobile No</th>
+                    <th>Gaurdian Aadhar no</th>
+                    <th>Gaurdian Name</th>
+                    <th>Gaurdian Mobile</th>
+                    <th>Adresss</th>
+                    <th>update</th>
+                    <th>delete</th>
+                    <th>enroll a child</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let row of pregnants">
+                    
+                    <td>{{ row.puid }}</td>
+                    <td>{{ row.pname }}</td>
+                    <td>{{ row.pdob | date }}</td>
+                    <td><div style="width: 50px; overflow-x: scroll;">{{  row.pdoc | date }}</div></td>
+                    <td>{{ row.pdod | date }}</td>
+                    <td>{{ row.pmobile }}</td>
+                    <td>{{ row.guid }}</td>
+                    <td>{{ row.gname }}</td>
+                    <td><div style="width: 55px; overflow-x: scroll;">{{ row.gmobile }}</div></td>
+                    <td><div style="width: 100px; overflow-x: scroll;">{{ row.pstreet }},{{ row.pvil }},{{ row.pmandal }},{{ row.pdistrict }},{{ row.pstate }},{{ row.ppincode }}</div></td>
+                    <td><button (click)="update(row)" id="update">Update</button></td>
+                    <td><button (click)="delete(row.puid)" id="delete">Delete</button></td>
+                    <td><button [disabled]="!row.delivery" (click)="enrollChild(row)" id="enroll">Enroll Child</button></td>
+
+                  </tr>
+                </tbody>
+              </table>
+              
+        </div>
+    </div>
+</body>
+</html>

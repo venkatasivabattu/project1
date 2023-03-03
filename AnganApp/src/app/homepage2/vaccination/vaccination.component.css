@@ -1,0 +1,221 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 100px;
+    background-image: linear-gradient(to left, #f4f4e1, #fcedde, #ffe7e0, #fde3e7, #f3e1ee, #ebe2f4, #e0e5f8, #d5e7f8, #ccecf7, #c9eff0, #cdf2e6, #d8f2da);
+    height: 80vh;
+    width:100%;
+    padding:4.5% 2% 0.5% 0.5%;
+    
+}
+.container{
+    width: 100%;
+    height:100%;
+    padding:5px;
+   
+}
+.container .sub-container{
+    width:26%;
+    height:99%;
+    margin-right:0.5%;
+}
+.container .item1{
+    position: absolute;
+    top:35%;
+    left:28%;
+    width:70%;
+    height:57%;
+}
+.container .item1,.sub-container{
+    
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,0.9);;
+}
+.container .item1{
+    border-radius: 8px;
+}
+.container .sub-container .item2{
+    width:100%;
+    height:50%;
+    background-color: rgba(255, 255, 255,0.8);
+    
+    
+
+}
+.container .sub-container .item2 h3{
+    text-align: center;
+    background-color: rgb(240, 68, 137);
+    padding: 4px;
+    padding-left: 20px;
+    border-bottom: 3px solid blue;
+    color: #ffffff;
+}
+.container .sub-container .item2 .holder{
+    height:90%;
+   /* background-color: rgb(255, 242, 125);*/
+    padding-top: 1px;
+    padding-left: 0px;
+    overflow-y: scroll;
+    color:blue;
+    
+}
+
+.container .sub-container .item2 .holder ul li{
+    
+    margin-bottom: 3px;
+    padding: 3px;
+    font-size: px;  
+    cursor: pointer;
+}
+
+.container .sub-container .item2 .holder ul li:hover{
+    background-color: rgb(80, 240, 47);
+    box-shadow: 2px 2px 3px black;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+  .container .item1{
+    padding: 0px;
+  }
+  .container .item1 .search-container{
+    background-color: rgba(0, 255, 255,0.5);
+    display:flex;
+   padding: 10px;
+   border-bottom: 2px solid blue;
+   color:blue;
+   padding-top:20px;
+   margin-top:0px;
+    
+  }
+  .container .item1 .search-container select{
+    margin-right:22px;
+    margin-left:2px;
+    min-width:100px;
+    max-width: 100px;
+    height:23px;
+    cursor: pointer;
+  }
+  .container .item1 .search-container select:last-child{
+    margin-right:10px;
+    
+  }
+  .container .item1 .search-container select option{
+    
+    cursor: pointer;
+  }
+.fa {
+margin: 1px;
+}
+.item1 h2{
+    text-align: center;
+    background-color:rgba(0, 255, 255,0.5);
+    padding: 10px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    color:mediumblue;
+}
+.container .item1 .search-container button{
+    color:blue;
+    background-color: rgb(255, 13, 0);
+    width:80px;
+    height:30px;
+    padding:3px;
+    margin-top:-4px;
+    margin-left:7px;
+    margin-right:15px;
+    border-radius: 5px;
+    border: 2px solid blue;
+    cursor: pointer;
+    color:#fff;
+    border:2px 2px 2px black;
+
+}
+.container .item1 .search-container button:hover{
+    box-shadow:2px 2px 3px black;
+}
+.container .item1 .search-container button:disabled{
+    background-color: rgb(236, 168, 164);
+    cursor: not-allowed;
+    margin-top:-4px;
+    margin-left:-5px;
+    margin-right:10px;
+    border-radius: 5px;
+    border: 2px solid blue;
+
+}
+.container .item1 .result{
+    margin-top:2.5%;
+    margin-left:4%;
+    width:93%;
+    height:55%;
+
+    
+}
+.result .fail p{
+    
+    margin-top:0px;
+    color:red;
+    background-color: #fff;
+    margin-left:-10px;
+    text-align: center;
+    font-size: 25px;
+}
+.result .fail div{
+    height:50px;
+}
+.success{
+    
+    width:99%;
+    height: 98%;
+    overflow-y: scroll;
+    padding-top:10px;
+}
+.success table{
+    width:100%;
+}
+
+table,th,td,tr{
+    border:1px solid blue;
+    border-collapse: collapse;
+    
+}
+table,th{
+    padding: 10px;
+}
+tr,td{
+    padding:8px;
+}
+th{
+    background-color:  rgb(240, 68, 137);
+    color:#fff;
+}
+tr td:nth-child(3){
+   
+    text-align: center;
+    padding:10px;
+}
+tr td button{
+    padding: 5px;
+    border-radius: 5px;
+   background-color:rgb(80, 240, 47); 
+   border:1px solid blue;
+   color:blue;
+   box-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+}
+tr td button:hover{
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.9);
+   background-color:rgba(80, 240, 47,0.65); 
+
+  
+}
+tbody tr:nth-child(even){
+    background-color:  rgb(244, 219, 229);
+
+}
