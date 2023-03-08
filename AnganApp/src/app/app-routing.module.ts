@@ -23,6 +23,7 @@ import { UpdatecComponent } from './homepage2/updatec/updatec.component';
 
 import { VaccinationComponent } from './homepage2/vaccination/vaccination.component';
 import { ViewVaccineComponent } from './homepage2/view-vaccine/view-vaccine.component';
+import { NutritionComponent } from './homepage2/nutrition/nutrition.component';
 
 
 
@@ -49,9 +50,9 @@ const routes: Routes = [
       {path:'updatep',component:UpdatepComponent},
       {path:'updatec',component:UpdatecComponent},
       {path:'vaccines',component:VaccinationComponent},
-        
-      {path:'viewV',component:ViewVaccineComponent}
-                ]
+      {path:'viewV',component:ViewVaccineComponent},
+      {path:'nutrition',component:NutritionComponent}
+        ]
         
       
   },

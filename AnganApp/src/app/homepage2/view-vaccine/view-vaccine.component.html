@@ -7,17 +7,59 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hiiii</h1>
-    <h1>hiiii</h1>
-     <h1>hiiii</h1>
-    <h1>hiiii</h1>
-     <h1>hiiii</h1>
-    <h1>hiiii</h1>
-     <h1>hiiii</h1>
-    <h1>hiiii</h1>
-     <h1>hiiii</h1>
-    <h1>hiiii</h1>
+    <div class="dose">
+        <h2>Dosages</h2>
+        <ul *ngFor="let d of ddata">
+            <li><p (click)="doseFun(d)"><b>Dose {{d.dn}}</b></p></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h2>{{vdata[0].vfname}}({{vdata[0].vname}}){{cd}}</h2>
+        <div class="search">
+           <h3><b> Status: </b></h3><select [(ngModel)]="status" (change)="statusFun()">
+                <option value="true">Vaccinated</option>
+                <option value="false">pending</option>
+                <option value="hi">All</option>
+            </select>
+            <button class="back" (click)="backFun()"><b>Back</b></button>
+        </div>
+        
+        <div class="fail" *ngIf="nodata;else s">
+          <div></div>
+         <img src="/../assets/images/homepage2/nodata.png">
+        </div>
+        <ng-template #s>
+        <div class="success" *ngIf="fdata">
+          <table>
+            <thead>
+                <tr>
+                  <th>UID/Aadhar</th>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>Date of Vaccination</th>
 
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let v of fdata">
+                <td>{{v.uid}}</td>
+                <td>{{v.uname}}</td>
+                <td>
+                  <div *ngIf="!v.status;else vaccinated">
+                    <button (click)="markVaccination(v)"><b>Vaccinate</b></button>
+                  </div>
+                  <ng-template #vaccinated>
+                    <p>Vaccinated</p>
+                  </ng-template>
+                </td>
+                <td>{{v.date | date}}</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </ng-template>
+      </div>
+    
 </body>
 </html>
-<router-outlet></router-outlet>

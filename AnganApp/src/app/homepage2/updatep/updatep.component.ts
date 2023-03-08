@@ -67,11 +67,11 @@ export class UpdatepComponent implements OnInit {
     const data={};
     data['tdata']=fdata;
     data['id']=this.fin.puid;
-    console.log(data);
-    if(fdata.delivery==1){
-      if(fdata.dob=='' || fdata.dob==null){
+    console.log(data,fdata,'jiii');
+    if(fdata.delivery==1 && fdata.pdod==null){
+      
         alert("please enter date of delivery....");
-      }
+      
     }
     else{
 

@@ -504,29 +504,85 @@ router.put("/markVaccination",(req,res)=>{
 });
 
 
-//vie vaccine realated
-router.get('/getVaccine_Dosage/:id',(req,res)=>{
-    const id=req.params.id;
-    connection.query("select * from vaccines where vid=?",[id],
+//view vaccine realated
+router.get('/getVaccine_Dosage_Vacinations',(req,res)=>{
+    const data=req.body;
+    console.log(req.query.vid,req.query.aid);
+    connection.query("select * from vaccines where vid=?",[req.query.vid],
     (err,res1)=>{
         if(err){
             res.json({err:err});
         }
         else{
-            connection.query("select * from dosages where vid=?",[id],
+            connection.query("select * from dosages where vid=?",[req.query.vid],
                 (err,res2)=>{
                     if(err){
                         res.json({err:err});
                     }
                     else{
-                        res.json({
-                            res1:res1,
-                            res2:res2
+                        connection.query("select * from vaccinations where aid=? and vid=?",[req.query.aid,req.query.vid],
+                        (err,res3)=>{
+                            if(err){
+                                res.json({err:err});
+                            }else{
+                                res.json({
+                                    res1:res1,
+                                    res2:res2,
+                                    res3:res3
+
+                                });
+                            }
                         });
                     }
                 }
             );
         }
     });
+    
 });
+
+
+
+
+
+//related to nutrition
+
+//getAllCategories from nutrition table
+router.get('/getCategories',(req,res)=>{
+    connection.query("select * from nutrition",(err,result)=>{
+        if(err){
+            res.json({err:err});
+        }
+        else{
+            res.json({result:result});
+        }
+        });
+    
+});
+//get All the pregnant women under the anganwadi 
+router.get('/getPregnants/:aid',(req,res)=>{
+    aid=req.params.aid;
+    connection.query("select * from pregnants where aid=? and delivery=?",[aid,false],(err,result)=>{
+        if(err){
+            res.json({err:err});
+        }
+        else{
+            res.json({result:result});
+        }
+    });
+});
+//get All the delivred women under the anganwadi 
+router.get('/getDelivered/:aid',(req,res)=>{
+    aid=req.params.aid;
+    connection.query("select * from pregnants where aid=? and delivery=?",[aid,true],(err,result)=>{
+        if(err){
+            res.json({err:err});
+        }
+        else{
+            res.json({result:result});
+            console.log(result)
+        }
+    });
+});
+
 module.exports=router;

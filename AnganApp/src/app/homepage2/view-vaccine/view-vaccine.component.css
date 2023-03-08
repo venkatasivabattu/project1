@@ -1,0 +1,193 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    margin-top:144px;
+    background-image: url('/../assets/images/bg/vaccinebg.jpg');
+    background-position: center;
+    background-size: cover;
+    height:72.92vh;
+    display: flex;
+}
+.dose{
+    width:23%;
+   
+    
+    background-color:rgba(0, 0, 0,0.25);
+    margin:20px;
+    margin-top: 30px;
+    border-radius:8px;
+    overflow-y: scroll;
+    box-shadow:2p 2px 3px black;
+}
+.dose h2{
+    background-color: hsl(239, 97%, 44%);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding:8px;
+    text-align:center;
+   color:#fff;
+   border-bottom:2px solid #fff;
+}
+.dose ul{
+    list-style-type: none;
+    list-style-position: inside;
+}
+.dose ul li{
+    align-items: center;
+    text-align:center;
+    margin-top:15px;
+    margin-bottom:15px;
+    padding:10px;
+    border-radius:25px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+}
+.dose ul li p{
+    margin-left: 40%;;
+    text-align: center;
+    width:fit-content;
+    padding-bottom: 2px;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+  li:nth-child(odd){
+    background-color:#fff;
+
+  }
+  .dose ul li:hover {
+    background-color: rgba(0, 0, 255,0.79);
+    border-bottom: 2px solid #fff;
+    box-shadow: 2px 2px 3px black;
+    color:#fff;
+    
+}
+.dose ul li p:hover{
+    
+    border-bottom: 1px solid #fff;
+}
+.dose ul li:focus {
+    background-color: #fff;
+    color:#fff;
+    
+}
+.main{
+    width:70%;
+    height:92%;
+    background-color: rgba(240, 248, 255,0.1);
+    margin:10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
+.main h2{
+    background-color: rgb(23, 12, 23,0.89);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding:8px;
+    text-align: center;
+    color:#fff;
+    border-bottom: 1px solid blue;
+}
+.main .search{
+    background-color:rgba(255, 255, 255,0.4);
+    width:100%;
+    height:15%;
+    text-align: center;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.search select{
+    width:130px;
+    height:25px;
+}
+.main .success{
+    
+    width:95%;
+    height: 60%;
+    overflow-y: scroll;
+    margin-top:30px;
+    padding-left: 50px;
+    padding-right: 20px;
+   
+}
+.success table{
+    width:100%;
+}
+
+table,th,td,tr{
+    border:1px solid blue;
+    border-collapse: collapse;
+    
+}
+table,th{
+    padding: 10px;
+}
+tr,td{
+    padding:8px;
+}
+th{
+    background-color:  rgb(55, 193, 24);
+    color:#0f0101;
+}
+tr td:nth-child(3){
+   
+    text-align: center;
+    padding:10px;
+}
+tr td button{
+    padding: 5px;
+    border-radius: 5px;
+   background-color:blue; 
+   border:1px solid blue;
+   color:#fff;
+   box-shadow: 2px 2px 3px rgba(0,0,0,0.9);
+   cursor: pointer;
+}
+tr td button:hover{
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.9);
+   background-color:rgb(144, 23, 214); 
+
+  
+}
+tbody tr:nth-child(even){
+    background-color:  rgb(206, 247, 204);
+
+}
+tbody tr:nth-child(odd){
+    background-color: #fff;
+
+}
+.fail{
+    padding-left:31%
+}
+.fail img{
+   width:350px;
+   height:290px;
+}
+.back{
+    position:absolute;
+    top:41.5%;
+    left:88.5%;
+    width:80px;
+    height:26px;
+    cursor:pointer;
+    box-shadow: 2px 2px 2px black;
+    background-color: red;
+    color:#fff;
+    border-radius: 8px;
+    border: none;
+}
+.back:hover{
+    background-color: rgba(255, 0, 0,0.6);
+    box-shadow: 2px 2px 3px black;
+    color:blue;
+   
+}

@@ -45,8 +45,13 @@ export class VaccinationService {
 
 
   //view vaccine related servicee
-  public getVaccine_Dosage(id):Observable<any>{
+  public getVaccine_Dosage_Vacinations(id):Observable<any>{
     console.log(id,'viewV')
-    return this.http.get("http://localhost:3000/getVaccine_Dosage/"+id);
+    const data={
+      'vid':id,
+      'aid':sessionStorage.getItem('aid')
+    };
+    
+    return this.http.get("http://localhost:3000/getVaccine_Dosage_Vacinations",{params:data});
   }
 }

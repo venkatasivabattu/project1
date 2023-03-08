@@ -24,6 +24,7 @@ import { UpdatepComponent } from './homepage2/updatep/updatep.component';
 import { UpdatecComponent } from './homepage2/updatec/updatec.component';
 import { VaccinationComponent } from './homepage2/vaccination/vaccination.component';
 import { ViewVaccineComponent } from './homepage2/view-vaccine/view-vaccine.component';
+import { NutritionComponent } from './homepage2/nutrition/nutrition.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { ViewVaccineComponent } from './homepage2/view-vaccine/view-vaccine.comp
     UpdatecComponent,
     VaccinationComponent,
     ViewVaccineComponent,
+    NutritionComponent,
     
     
   ],

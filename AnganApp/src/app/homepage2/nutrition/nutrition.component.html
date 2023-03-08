@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="img1">
+        <img src="/../../assets/images/homepage2/nutrition/img1.jpg" width="310px" height="432px">
+    </div>
+    <div class="img2">
+        <img src="/../../assets/images/homepage2/nutrition/img2.jpg" width="580px" height="432px">
+    </div>
+    <div class="img3">
+        <img src="/../../assets/images/homepage2/nutrition/img3.jpg" width="650px" height="432px">
+    </div>
+    <div class="chart">
+        <div class="w">
+            <h3>Women Catalogue</h3>
+            <ul *ngFor="let c of categories">
+                
+                <li *ngIf="c.cfor=='p'||c.cfor=='d'" (click)="testNutrition(c)">Category-{{c.category}}</li>
+            </ul>
+        </div>
+        <div class="c">
+            <h3>Children Catalogue</h3>
+            <ul *ngFor="let c of categories">
+                
+                <li *ngIf="c.cfor=='c'" (click)="testNutrition(c)">Category-{{c.category}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="result"  *ngIf="catClicked" [style.display]="closer">
+        <section><p>{{category}} Category-{{catData.category}}</p><button (click)="closeFun()">X</button></section>
+        <div class="holder">
+            <div class="info">
+                <div class="eligibility">
+                    <h3>Description</h3>
+                    <p>{{catData.cdesc}}</p>
+                </div>
+                <div class="items">
+                    <h3>Provisionings</h3>
+                    <p>{{catData.items}}</p>
+                </div>
+            </div>
+            <div class="data">
+                <h3>Benificiary List</h3>
+                <div class="success" *ngIf="fdata.length;else f">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>UID/Aadhar</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of fdata">
+                                <td>{{i.uid}}</td>
+                                <td>{{i.uname}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ng-template  #f>
+                    <div class="fail">
+                        <p>No Data Found</p>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+
+       
+
+    </div>
+</body>
+</html>
