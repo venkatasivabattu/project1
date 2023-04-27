@@ -14,10 +14,10 @@
         <h1>Search For Anganwadi</h1>
         </div>
         <form class="form">
-            <input type="search" class="search" [(ngModel)]="search" name="search" placeholder="enter..." autocomplete="off" required> 
+            <input type="search" class="search" [(ngModel)]="search" name="search" placeholder="Enter vil/town/city/state name..." autocomplete="off" required> 
             <button type="submit" (click)='searchFor()'><i class="fas fa-search"></i></button> 
         </form>
-        <div class="heart">
+      <div class="heart">
         <table>
           <thead>
             <tr>
@@ -32,11 +32,10 @@
               <th >Pincode</th>
             </tr>
           </thead>
-        </table>
-        </div>
-        <div class="tab-container">
+        
+        
           
-          <table class="ok">
+          
             
             <tbody>
               <tr *ngFor="let a of angan">
@@ -52,7 +51,8 @@
               </tr>
             </tbody>
           </table>
-        </div>  
+         
+    </div>
     </div>
 </body>
 </html>

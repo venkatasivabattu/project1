@@ -23,6 +23,7 @@ export class ViewcComponent implements OnInit {
       const data:any={};
       data.s=this.search;
       data.a=this.aid;
+      console.log(data);
       this.ds.searchForChildren(data).subscribe(
         (res)=>{
           console.log(res.result);

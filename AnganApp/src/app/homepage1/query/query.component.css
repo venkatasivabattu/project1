@@ -86,47 +86,65 @@ body{
 
 }
 .heart{
-    width:95%;
-    margin-left:2.5%;
-    margin-right: 2.5%;
-    background-color: blue;
-    margin-bottom: 0px;
-    height:50px;
+    
+    width: 90%;
+    height: 250px;
+    margin-left: 5%;
+    overflow-y: scroll;
+
 }
 .heart table{
-    width:100%;
-    height:50px;
-}
-.heart table,th,td{
-    padding:8px;
+    width: 100%;
     
 }
-.heart table tr th:first-child{
-    padding:2px;
-}
-.tab-container{
-    width:95%;
-    margin-left:2.5%;
-    margin-right: 2.5%;
-    margin-top: 0px;
-    background-color: aqua;
-    min-height: 0px;
-    max-height:120px;
-    overflow-y: scroll;
-    
-}
-.tab-container table{
-    width:100%;
-    height:100px;
-    
-
-}
-
-.tab-container table,th,td{
-    padding: 10px;
-    
-}
-table,th,td{
-    border: 1px solid black;
+.heart table,td{
+    padding: 5px;
+    border: 1px solid blue;
     border-collapse: collapse;
 }
+.heart table th{
+    padding: 12px 5px;
+    background-color: blue;
+    color: #ffff;
+    border-color: 1px solid #fff;
+}
+.heart table td{
+    background-color: #ffffffc5;
+}
+.heart table thead tr th{
+    border-right: 1px solid #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

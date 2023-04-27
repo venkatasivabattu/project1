@@ -28,6 +28,11 @@ export class Homepage2Component implements OnInit {
   getValue(): void {
     this.wid=this.mysession.get('wid');
     this.wname=this.mysession.get('wname');
+    this.wname=this.wname.split(" ")[0];
+  }
+  logout(){
+    sessionStorage.clear();
+    this.router.navigate(['./home1/login']);
   }
  
 

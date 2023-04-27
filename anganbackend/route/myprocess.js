@@ -20,7 +20,7 @@ router.get('/allschemes',(req,res)=>{
 });
 router.get('/all/:q',(req,res)=>{
     const q = req.params.q;
-    connection.query("select * from anganwadis where avil= ? or amandal=? or adistrict=? or astate=? or apincode=?",[q,q,q,q,q],
+    connection.query("select * from anganwadis where avil like ? or amandal like ? or adistrict like ? or astate like ? or apincode like ?",['%'+q+'%','%'+q+'%','%'+q+'%','%'+q+'%','%'+q+'%'],
         (err,result)=>{
             if(err){
                 res.json({err:err});
@@ -184,8 +184,8 @@ router.get('/searchWomen',(req,res)=>{
     const s = qObj.s;
     const a = qObj.a;
     console.log(s, a);
-    connection.query("SELECT * FROM pregnants WHERE (pname=?   OR gname=? OR pvil=? OR pmandal=? OR pdistrict=? OR pstate=? ) AND aid=?",
-        [s, s, s, s, s, s, a],
+    connection.query("SELECT * FROM pregnants WHERE (pname like ?   OR gname like ? OR pvil like ? OR pmandal like ? OR pdistrict like ? OR pstate like ? ) AND aid=?",
+        ['%'+s+'%', '%'+s+'%','%'+s+'%','%'+s+'%','%'+s+'%', '%'+s+'%', a],
         (err,result)=>{
             if(err){
                 res.json({err:err});
@@ -263,8 +263,8 @@ router.get('/searchChildren',(req,res)=>{
     const s = qObj.s;
     const a = qObj.a;
     console.log(s, a);
-    connection.query("SELECT * FROM children WHERE (cname=?   OR mname=? OR cvil=? OR cmandal=? OR cdistrict=? OR cstate=? ) AND aid=?",
-        [s, s, s, s, s, s, a],
+    connection.query("SELECT * FROM children WHERE (cname like ?   OR mname like ? OR cvil like ? OR cmandal like ? OR cdistrict like ? OR cstate like ? ) AND aid=?",
+    ['%'+s+'%', '%'+s+'%','%'+s+'%','%'+s+'%','%'+s+'%', '%'+s+'%', a],
         (err,result)=>{
             if(err){
                 res.json({err:err});

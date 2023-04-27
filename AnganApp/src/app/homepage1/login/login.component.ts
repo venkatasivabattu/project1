@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     if(sessionStorage.length>0){
       alert("please LogOut....");
+      this.router.navigate(['./home2'])
       
     }
     

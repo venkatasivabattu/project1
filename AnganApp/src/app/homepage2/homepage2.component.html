@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
     <body>
 
         <div class="myheader">
             <a  routerLink="home2" class="myheaderimg"><img src="/assets/images/logo.png" ></a>  
             <div class="mini-navbar"> 
                 <a routerLink="../home2">Dashboard</a>
-                <a routerLink="../home2" style="color:blue;">{{wname[0]}}</a>
+                <a routerLink="../home2" style="color:#fff;">{{wname}}</a>
+                <button (click)="logout();" style="color:blue;" id="l"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
             </div>
             
         </div>

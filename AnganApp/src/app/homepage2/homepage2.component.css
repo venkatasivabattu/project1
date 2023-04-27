@@ -24,7 +24,7 @@ html{
     padding-top: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 43%;
+    margin-left: 50%;
     margin-right:750px;
     background-color: #06038D;
     border-radius: 20%;
@@ -34,12 +34,25 @@ html{
 .mini-navbar{
     margin-bottom: 3px;
     margin-right: 3px;
+    width: fit-content;
+    
+    display: flex;
+    flex-direction: row;
+
     
 }
-.mini-navbar a{
-    margin-right: 9px;
+.mini-navbar a,button{
+    margin-right: 12px;
     font-size:20px;
     color:#fff;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+.mini-navbar button:hover .fa {
+    color: red;
 }
  .navbar{
 
